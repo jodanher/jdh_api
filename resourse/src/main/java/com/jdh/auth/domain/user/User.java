@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Data
-@EqualsAndHashCode(callSuper = true, of = "id")
+@EqualsAndHashCode(of = "id")
 @Entity
 @Table(name = "tb_user")
 public class User<getPassword> extends AbstractPersistable<UUID> {

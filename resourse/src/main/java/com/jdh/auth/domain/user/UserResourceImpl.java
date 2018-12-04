@@ -39,6 +39,6 @@ class UserResourceImpl implements UserResource {
 
     @Override
     public void delete(@PathVariable UUID id) {
-
+        service.delete(id);
     }
 }
