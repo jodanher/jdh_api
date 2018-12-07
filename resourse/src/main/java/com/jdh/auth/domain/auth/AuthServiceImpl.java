@@ -86,7 +86,7 @@ public class AuthServiceImpl implements AuthService {
     }
 
     public static OAuth2Request createOAuth2Request(String clientId, String username, String password, Set<String> scope,
-            Collection<? extends GrantedAuthority> authorities) {
+                                                    Collection<? extends GrantedAuthority> authorities) {
         if (scope == null) {
             scope = new HashSet<>(1);
             scope.add("openid");

@@ -16,14 +16,14 @@ class UserServiceImpl implements UserService {
 
     private UserRepository repository;
 
-    private PasswordEncoder passwordEncoder;
-
     @Autowired
     private AuthService authService;
 
-    public UserServiceImpl(UserRepository repository, PasswordEncoder passwordEncoder) {
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    public UserServiceImpl(UserRepository repository) {
         this.repository = repository;
-        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -58,6 +58,11 @@ class UserServiceImpl implements UserService {
         }
 
         return repository.save(user);
+    }
+
+    @Override
+    public void delete(UUID id) {
+        repository.deleteById(id);
     }
 
     @Override

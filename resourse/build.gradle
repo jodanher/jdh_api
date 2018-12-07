@@ -34,7 +34,7 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-security')
     implementation('org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.1.0.RELEASE')
     implementation('org.projectlombok:lombok')
-    implementation('com.h2database:h2')
+    implementation('org.hsqldb:hsqldb')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
